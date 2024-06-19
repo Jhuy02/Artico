@@ -20,3 +20,9 @@ window.addEventListener("scroll", function () {
   }
   lastScrollTop = scrollTop;
 });
+
+modal_elemet.addEventListener("click", function (event) {
+  if (!event.target.closest(".modal_container")) {
+    modal_elemet.style.display = "none";
+  }
+});
