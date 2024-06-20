@@ -1635,9 +1635,9 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .share_comment1_box_star p {
   color: var(--Grey-Normal, #454545);
   font-family: SVN-Gilroy;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 600 !important;
   line-height: 150%;
   width: 0.5rem;
   height: 1.0625rem;
@@ -1647,7 +1647,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   height: 1.21794rem;
   margin-left: 0.623rem;
 }
-.share_comment1_content {
+.share_comment1_box p {
   color: var(--Grey-Normal, #454545);
   font-family: SVN-Gilroy;
   font-size: 1.25rem;
@@ -1899,6 +1899,26 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .artico_contact_btnicon img {
   width: 1.5rem;
   height: 1.5rem;
+}
+.share_comment1_noimg {
+  margin-top: 2rem;
+  margin-right: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100rem;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: SVN-Gilroy;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.share_line_interhtml:last-child {
+  display: none;
 }
 /* mb */
 @media (max-width: 767px) {
@@ -2478,7 +2498,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   }
   .nguoimb {
     transform: translateX(-1rem);
-    width: calc(100% + 1rem);
+    width: calc(100% + 2rem);
     display: block;
     position: relative;
     z-index: 10;
@@ -2711,7 +2731,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     font-weight: 600;
     line-height: 133.3%;
   }
-  .share_comment1_content {
+  .share_comment1_box p {
     color: var(--grey-dark-active, #1f1f1f);
     font-family: SVN-Gilroy;
     font-size: 0.875rem;
