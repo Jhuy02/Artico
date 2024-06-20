@@ -115,19 +115,22 @@ function DataCmt(data) {
       i.remove(); // Remove the element
     });
   });
-  data?.rates.forEach((item) => {
-    const star = parseInt(item?.category_slug[0]);
-    const itemElement = `<div class="share_comment">
-    <img
-      class="share_comment_lineLpc mbhidden"
-      src="./svg/lineL.svg"
-      alt=""
-    />
-    <img
+  {
+    /* <img
       class="share_comment_lineLmb pchidden"
       src="./svg/lineLmb.svg"
       alt=""
+    <img
+      class="share_comment_lineLpc"
+      src="./svg/lineL.svg"
+      alt=""
     />
+    /> */
+  }
+  data?.rates.forEach((item) => {
+    const star = parseInt(item?.category_slug[0]);
+    const itemElement = `<div class="share_comment">
+    <div class="share_comment_lineLpc"></div>
     <div class="share_comment_1">
     ${
       item?.question_ask?.avatar?.url
@@ -185,6 +188,14 @@ function DataCmt(data) {
         i.appendChild(starImg);
       });
     }
+    var element = document.querySelectorAll(".share_comment_1");
+    var share_comment_lineLpc = document.querySelectorAll(
+      ".share_comment_lineLpc"
+    );
+    element?.forEach((i, index) => {
+      var length = i.clientHeight;
+      share_comment_lineLpc[index].style.height = `${length + 50}px`;
+    });
   });
 }
 fetchDataShare(category);

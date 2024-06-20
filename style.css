@@ -1590,10 +1590,12 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .share_comment_lineLpc {
   display: block;
   position: absolute;
-  top: 4.7rem;
+  top: 2.7rem;
   left: 1.5rem;
-  width: 3.1695rem;
-  height: 12.73919rem;
+  width: 4rem;
+  border-left: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  border-radius: 2rem;
 }
 .share_comment_1 {
   display: flex;
@@ -1922,6 +1924,16 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 }
 /* mb */
 @media (max-width: 767px) {
+  .share_comment1_noimg {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    font-family: Inter;
+    font-size: 0.74369rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
   .artico_contact {
     right: 2.25rem;
     bottom: 3rem;
