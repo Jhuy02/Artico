@@ -69,25 +69,56 @@ async function fetchData() {
     dataContainer.textContent = "Failed to load data.";
   }
 }
-let category = false;
-console.log(category);
+let categoryAll = false;
 const filterStarContainer = document.querySelector(".filter_star");
 function DataFilter(data) {
-  data?.rates_by_category?.forEach((item) => {
+  data?.rates_by_category?.forEach((item, i) => {
     const category = item?.category_name.replace(" ", "-");
-    console.log(category);
     const itemElement = document.createElement("button");
     itemElement.textContent = `${item?.category_name}`;
     itemElement.classList.add("filter_star_btn");
+    if (i + 1 === 5) {
+      itemElement.classList.add("active_filter_star_btn");
+    }
     itemElement.addEventListener("click", () => {
-      fetchDataShare(category); // Gọi hàm handleClick khi button được click
+      for (let i = 0; i < filterStarContainer?.children.length; i++) {
+        const child = filterStarContainer?.children[i];
+        if (child.classList.contains("active_filter_star_btn")) {
+          child.classList.remove("active_filter_star_btn");
+        }
+      }
+      itemElement.classList.add("active_filter_star_btn");
+      fetchDataShare(category);
     });
     filterStarContainer.appendChild(itemElement);
+    const widthLine = (item?.rate_count / data?.total_all_rate) * 100;
+    const itemElementLine = `
+    <div class="evaluate_total_warper_line">
+      <div class="evaluate_total_all_line"></div>
+      <div style="width: ${widthLine}%" class="evaluate_total_line_star"></div>
+      <span>${item?.rate_count}</span>
+    </div>`;
+    document
+      .querySelector(".evaluate_total_allline")
+      .insertAdjacentHTML("beforeend", itemElementLine);
   });
+  let averageRating = 0;
+  data?.rates_by_category?.forEach((count, index) => {
+    averageRating += ((index + 1) * count?.rate_count) / data?.total_all_rate;
+  });
+  const evaluate_total_text = document.querySelector(".evaluate_total_text");
+  const evaluateText = document.createElement("span");
+  evaluateText.textContent = `${averageRating.toFixed(1)}`;
+  evaluate_total_text.insertBefore(
+    evaluateText,
+    evaluate_total_text.firstChild
+  );
+
+  const itemElementP = document.createElement("p");
+  itemElementP.textContent = `(${data?.total_all_rate} đánh giá)`;
+  document.querySelector(".share_all").appendChild(itemElementP);
 }
-// originalText.replace(' ', '-');
 async function fetchDataShare(category) {
-  console.log(category);
   try {
     const responseCmt = await fetch(
       `https://articolageno.okhub-tech.com/wp-json/okhub/v1/rates?page=1&per_page=2&category=${
@@ -186,5 +217,5 @@ function DataCmt(data) {
     });
   });
 }
-fetchDataShare(category);
+fetchDataShare(categoryAll);
 fetchData();

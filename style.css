@@ -51,7 +51,14 @@ html body[data-scroll-locked] {
     font-size: 4.26666vw;
   }
 }
-
+button {
+  cursor: pointer;
+  outline: none;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   background: white;
   color: black;
@@ -73,55 +80,55 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 /* url("./fonts/SVN-Gilroy\ Xlight.otf") format("truetype"); */
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Black.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyBlack.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Bold.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyBold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Medium.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyMedium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Light.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyLight.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ SemiBold.otf") format("opentype");
+  src: url("./fonts/SVN-GilroySemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Regular.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyRegular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Thin.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyThin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ XBold.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyXBold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("./fonts/SVN-Gilroy\ Xlight.otf") format("opentype");
+  src: url("./fonts/SVN-GilroyXlight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -1490,7 +1497,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   align-items: center;
 }
 .evaluate_total_text span {
-  width: 1.44475rem;
+  width: max-content;
   height: 3.25rem;
   color: #020b27;
   font-family: "SVN-Gilroy";
@@ -1532,6 +1539,10 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .evaluate_total_all {
   margin-right: 1.5rem;
 }
+.evaluate_total_allline {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .evaluate_total_line_star {
   position: absolute;
   border-radius: 1rem;
@@ -1557,6 +1568,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .filter_star {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 }
 .filter_star_text {
   color: #4a4f63;
@@ -1567,6 +1579,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   line-height: 150%;
 }
 .filter_star_btn {
+  cursor: pointer;
   margin-left: 0.63rem;
   display: flex;
   width: 3.9375rem;
@@ -1921,6 +1934,13 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 }
 .share_line_interhtml:last-child {
   display: none;
+}
+.filter_star_warpper {
+  display: flex;
+  align-items: center;
+}
+.active_filter_star_btn {
+  background: #f8d98a;
 }
 /* mb */
 @media (max-width: 767px) {
@@ -2548,6 +2568,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   /*  */
   .reason {
     padding: 2.5rem 0;
+    padding-bottom: 0;
   }
   .reason_h2 {
     text-align: center;
@@ -2664,7 +2685,6 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   .evaluate_total_alltientrinh {
     flex: 1 0 0;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
   }
   .evaluate_total_all_line {
@@ -2696,6 +2716,14 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     font-weight: 500;
     line-height: 150%;
   }
+  .share_comment1_noimg {
+    margin: 0;
+  }
+  .share_comment_lineLpc {
+    top: 1.5rem;
+    left: 1rem;
+    width: 1rem;
+  }
   .evaluate_total_text span {
     color: #020b27;
     font-family: SVN-Gilroy;
@@ -2704,7 +2732,6 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     font-weight: 700;
     line-height: 133.3%;
     display: flex;
-    width: 0.5625rem;
     height: 0.875rem;
     flex-direction: column;
     justify-content: center;
@@ -2717,11 +2744,14 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     position: relative;
     height: 2rem;
     overflow-x: auto;
+    width: 100%;
+    justify-content: space-between;
   }
   .filter_star {
     width: max-content;
     position: absolute;
     overflow-x: auto;
+    padding-left: 4rem;
   }
   .share_comment1_img {
     margin: 0;
