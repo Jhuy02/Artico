@@ -15,18 +15,19 @@
     <nav id="navbar" class="nav">
       <img class="nav_imgbg" src="./img/nav.png" alt="nav artico" />
       <div class="nav_menu navmenu_modal">
-        <div class="nav_menuh1">
+        <h1 class="hidden_div">ARTICOLAGENO</h1>
+        <a href="/" class="nav_menuh1">
           <p class="nav_menu_span">ARTICOLAGENO</p>
           <div class="nav_warper_flex">
             <img src="./img/logo.png" alt="ARTICOLAGENO" />
             <p class="nav_menu_span">NAVITO PLUS</p>
           </div>
-        </div>
+        </a>
         <ul class="nav_menu_list">
-          <li class="nav_menu_item">Sản phẩm</li>
-          <li class="nav_menu_item">Giới thiệu</li>
-          <li class="nav_menu_item">Ý kiến khách hàng</li>
-          <li class="nav_menu_item">Liên hệ</li>
+          <a href="/" class="nav_menu_item">Sản phẩm</a>
+          <a href="/" class="nav_menu_item">Giới thiệu</a>
+          <a href="/" class="nav_menu_item">Ý kiến khách hàng</a>
+          <a href="/" class="nav_menu_item">Liên hệ</a>
         </ul>
         <img
           id="nav_menu_icon_menu"
@@ -312,7 +313,16 @@
     </section>
     <section class="leading_header">
       <div class="special_mechanism">
-        <img class="special_mechanism_img1" src="./img/bg_header1.png" alt="" />
+        <img
+          class="special_mechanism_img1 mbhidden"
+          src="./img/bg_header1.png"
+          alt=""
+        />
+        <img
+          class="special_mechanism_img1mb pchidden"
+          src="./img/cochekhacbietmb.png"
+          alt=""
+        />
         <img
           class="special_mechanism_img2 mbhidden"
           src="./img/bg_banner2.png"
@@ -1014,7 +1024,7 @@
           />
           <img
             class="share_comment_lineLmb pchidden"
-            src="./svg/lineL.svg"
+            src="./svg/lineLmb.svg"
             alt=""
           />
           <div class="share_comment_1">
@@ -1059,7 +1069,7 @@
           />
           <img
             class="share_comment_lineLmb pchidden"
-            src="./svg/lineL.svg"
+            src="./svg/lineLmb.svg"
             alt=""
           />
           <div class="share_comment_1">
@@ -1099,15 +1109,16 @@
     </section>
     <footer class="artico_footer">
       <div class="artico_footer_logo">
-        <div class="artico_footer_title">
+        <a href="/" class="artico_footer_title">
           <p class="artico_footer_title_span">ARTICOLAGENO</p>
           <div class="artico_footer_title_warper">
             <img src="./img/logoM.png" alt="ARTICOLAGENO" />
             <p class="artico_footer_title_span">NAVITO PLUS</p>
           </div>
-        </div>
+        </a>
         <p class="artico_footer_cty">
-          Nhập khẩu và phân phối bởi: CÔNG TY TNHH DƯỢC PHẨM ĐÔNG ĐÔ
+          Nhập khẩu và phân phối bởi:<br />
+          CÔNG TY TNHH DƯỢC PHẨM ĐÔNG ĐÔ
         </p>
         <p class="artico_footer_address">
           Địa chỉ: Tầng 1, 4, toà nhà Home City số 177, Tổ 51 Phố Trung Kính,
@@ -1274,10 +1285,12 @@
     </div>
     <div class="modal_navmenufixed">
       <div class="navmenufixed_list">
-        <div class="active_navmenufixed_item navmenufixed_item">Sản phẩm</div>
-        <div class="navmenufixed_item">Giới thiệu</div>
-        <div class="navmenufixed_item">Ý kiến khách hàng</div>
-        <div class="navmenufixed_item">Liên hệ</div>
+        <a href="/" class="active_navmenufixed_item navmenufixed_item"
+          >Sản phẩm</a
+        >
+        <a href="/" class="navmenufixed_item">Giới thiệu</a>
+        <a href="/" class="navmenufixed_item">Ý kiến khách hàng</a>
+        <a href="/" class="navmenufixed_item">Liên hệ</a>
       </div>
       <div class="navmenufixed_icon">
         <a href="/">
@@ -1287,6 +1300,20 @@
           <img src="./svg/inta.svg" alt="" />
         </a>
       </div>
+    </div>
+    <div class="artico_contact">
+      <a class="artico_contact_btn"
+        >Hotline
+        <div class="artico_contact_btnicon">
+          <img src="./svg/phone.svg" alt="" />
+        </div>
+      </a>
+      <a class="artico_contact_btn"
+        >Mua ngay
+        <div class="artico_contact_btnicon">
+          <img src="./svg/giohang.svg" alt="" />
+        </div>
+      </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
