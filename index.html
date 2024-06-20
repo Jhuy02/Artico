@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
     <nav id="navbar" class="nav">
       <img class="nav_imgbg" src="./img/nav.png" alt="nav artico" />
-      <div class="nav_menu">
+      <div class="nav_menu navmenu_modal">
         <div class="nav_menuh1">
           <p class="nav_menu_span">ARTICOLAGENO</p>
           <div class="nav_warper_flex">
@@ -24,7 +28,18 @@
           <li class="nav_menu_item">Ý kiến khách hàng</li>
           <li class="nav_menu_item">Liên hệ</li>
         </ul>
-        <img class="nav_menu_icon pchidden" src="./svg/menu.svg" alt="" />
+        <img
+          id="nav_menu_icon_menu"
+          class="nav_menu_icon pchidden"
+          src="./svg/menu.svg"
+          alt=""
+        />
+        <img
+          id="nav_menu_icon_X"
+          class="nav_menu_icon pchidden"
+          src="./svg/Xclose.svg"
+          alt=""
+        />
       </div>
     </nav>
     <section class="ld_banner">
@@ -66,7 +81,6 @@
           </div>
           <h1 class="introduce_menuh1">
             <p class="introduce_menu_span">ARTICOLAGENO</p>
-            <br />
             <div class="introduce_warper">
               <img src="./img/logoM.png" alt="ARTICOLAGENO" />
               <p class="introduce_menu_span">NAVITO PLUS</p>
@@ -606,18 +620,58 @@
         </div>
         <div class="case_list">
           <div class="case_list_item">
+            <img
+              class="case_list_item_linesong1"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
+            <img
+              class="case_list_item_linesong2"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
             <img class="case_list_item_img" src="./img/Iconillus.png" alt="" />
             <span class="case_list_item_p">ĐAU KHỚP, SƯNG VIÊM DAI DẲNG</span>
           </div>
           <div class="case_list_item">
+            <img
+              class="case_list_item_linesong1"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
+            <img
+              class="case_list_item_linesong2"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
             <img class="case_list_item_img" src="./img/Iconillus.png" alt="" />
             <span class="case_list_item_p">KHÔ KHỚP, KHỚP KÊU LỤC KHỤC</span>
           </div>
           <div class="case_list_item">
+            <img
+              class="case_list_item_linesong1"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
+            <img
+              class="case_list_item_linesong2"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
             <img class="case_list_item_img" src="./img/Iconillus.png" alt="" />
             <span class="case_list_item_p">RÁCH SỤN, THOÁI HÓA SỤN KHỚP</span>
           </div>
           <div class="case_list_item">
+            <img
+              class="case_list_item_linesong1"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
+            <img
+              class="case_list_item_linesong2"
+              src="./svg/lineSong.svg"
+              alt=""
+            />
             <img class="case_list_item_img" src="./img/Iconillus.png" alt="" />
             <span class="case_list_item_p">GIẢM CHỨC NĂNG VẬN ĐỘNG KHỚP</span>
           </div>
@@ -1137,23 +1191,7 @@
     <div class="modal">
       <div class="modal_container">
         <div class="modal_close">
-          <div class="modal_navmenu">
-            <div class="modal_navmenu_btn modal_navmenu_btn_active">
-              <p>1</p>
-            </div>
-            <div class="modal_navmenu_btn">
-              <p>2</p>
-            </div>
-            <div class="modal_navmenu_btn">
-              <p>3</p>
-            </div>
-            <div class="modal_navmenu_btn">
-              <p>4</p>
-            </div>
-            <div class="modal_navmenu_btn">
-              <p>5</p>
-            </div>
-          </div>
+          <div class="modal_navmenu"></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -1182,30 +1220,88 @@
             />
           </svg>
         </div>
-        <div class="modal_content">
-          <img class="modal_content_img" src="./img/anhkhop.png" alt="" />
-          <div class="modal_content_text">
-            <span>Cơ chế khác biệt</span>
-            <p>
-              Bảo vệ cấu trúc của sụn khớp qua đáp ứng miễn dịch dung nạp đường
-              uống là tiền đề quan trọng mà Articolageno hướng tới. Sản phẩm này
-              được thiết kế để tối ưu hóa cơ chế tự nhiên của cơ thể trong việc
-              phục hồi và bảo vệ sụn khớp mà không cần tới can thiệp ngoại vi.
-              Công nghệ đặc biệt mà chúng tôi ứng dụng làm cho dưỡng chất trong
-              Articolageno được cơ thể hấp thụ một cách hiệu quả nhất thông qua
-              hệ thống miễn dịch. Điều này không chỉ giúp kích thích cơ thể phản
-              ứng một cách tích cực với việc phục hồi sụn khớp mà còn giảm đáng
-              kể rủi ro của các tác dụng phụ. Với Articolageno, việc chăm sóc
-              sụn khớp không còn là một quá trình phức tạp, mà trở thành một
-              phần tự nhiên của cuộc sống hằng ngày. Mỗi viên nang không chỉ là
-              một giải pháp lý tưởng cho sức khỏe sụn khớp mà còn là sự khẳng
-              định về cam kết của chúng tôi trong việc mang lại lối sống lành
-              mạnh và tích cực cho bạn.
-            </p>
+        <div class="swiper mySwiperModul">
+          <div class="swiper-wrapper">
+            <div class="modal_content swiper-slide">
+              <img class="modal_content_img" src="./img/anhkhop.png" alt="" />
+              <div class="modal_content_text">
+                <span>Cơ chế khác biệt</span>
+                <p>
+                  Bảo vệ cấu trúc của sụn khớp qua đáp ứng miễn dịch dung nạp
+                  đường uống là tiền đề quan trọng mà Articolageno hướng tới.
+                  Sản phẩm này được thiết kế để tối ưu hóa cơ chế tự nhiên của
+                  cơ thể trong việc phục hồi và bảo vệ sụn khớp mà không cần tới
+                  can thiệp ngoại vi. Công nghệ đặc biệt mà chúng tôi ứng dụng
+                  làm cho dưỡng chất trong Articolageno được cơ thể hấp thụ một
+                  cách hiệu quả nhất thông qua hệ thống miễn dịch. Điều này
+                  không chỉ giúp kích thích cơ thể phản ứng một cách tích cực
+                  với việc phục hồi sụn khớp mà còn giảm đáng kể rủi ro của các
+                  tác dụng phụ. Với Articolageno, việc chăm sóc sụn khớp không
+                  còn là một quá trình phức tạp, mà trở thành một phần tự nhiên
+                  của cuộc sống hằng ngày. Mỗi viên nang không chỉ là một giải
+                  pháp lý tưởng cho sức khỏe sụn khớp mà còn là sự khẳng định về
+                  cam kết của chúng tôi trong việc mang lại lối sống lành mạnh
+                  và tích cực cho bạn.
+                </p>
+              </div>
+            </div>
+            <div class="modal_content swiper-slide">
+              <img class="modal_content_img" src="./img/anhkhop.png" alt="" />
+              <div class="modal_content_text">
+                <span>Cơ chế khác biệt</span>
+                <p>
+                  Bảo vệ cấu trúc của sụn khớp qua đáp ứng miễn dịch dung nạp
+                  đường uống là tiền đề quan trọng mà Articolageno hướng tới.
+                  Sản phẩm này được thiết kế để tối ưu hóa cơ chế tự nhiên của
+                  cơ thể trong việc phục hồi và bảo vệ sụn khớp mà không cần tới
+                  can thiệp ngoại vi. Công nghệ đặc biệt mà chúng tôi ứng dụng
+                  làm cho dưỡng chất trong Articolageno được cơ thể hấp thụ một
+                  cách hiệu quả nhất thông qua hệ thống miễn dịch. Điều này
+                  không chỉ giúp kích thích cơ thể phản ứng một cách tích cực
+                  với việc phục hồi sụn khớp mà còn giảm đáng kể rủi ro của các
+                  tác dụng phụ. Với Articolageno, việc chăm sóc sụn khớp không
+                  còn là một quá trình phức tạp, mà trở thành một phần tự nhiên
+                  của cuộc sống hằng ngày. Mỗi viên nang không chỉ là một giải
+                  pháp lý tưởng cho sức khỏe sụn khớp mà còn là sự khẳng định về
+                  cam kết của chúng tôi trong việc mang lại lối sống lành mạnh
+                  và tích cực cho bạn.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="modal_navmenufixed">
+      <div class="navmenufixed_list">
+        <div class="active_navmenufixed_item navmenufixed_item">Sản phẩm</div>
+        <div class="navmenufixed_item">Giới thiệu</div>
+        <div class="navmenufixed_item">Ý kiến khách hàng</div>
+        <div class="navmenufixed_item">Liên hệ</div>
+      </div>
+      <div class="navmenufixed_icon">
+        <a href="/">
+          <img src="./svg/fb.svg" alt="" />
+        </a>
+        <a href="/">
+          <img src="./svg/inta.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiperModul", {
+        pagination: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          el: ".modal_navmenu",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      });
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>

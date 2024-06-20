@@ -1,3 +1,20 @@
+:root {
+  --Trng: #fff;
+  --Linear-blue-1: linear-gradient(180deg, #004ab8 24.55%, #002262 77.84%);
+  --Linear-blue-2: linear-gradient(148deg, #004ab8 20.67%, #002262 81.2%);
+  --Linear-orange-1: linear-gradient(92deg, #e79a26 0.26%, #ffba54 100.1%);
+  --greyscaletext-0: #fff;
+  --Grey-Normal: #454545;
+  --Grey-Dark: #343434;
+  --Spacing-Spacing---none: 0rem;
+  --Spacing-Spacing---6: 1.5rem;
+  --LINE: #ffaf46;
+  --Linear-blue-1: #004ab8;
+  --Grey-Light: #ececec;
+  --Foundation-Blue-blue-2: #c2cada;
+  --grey-normal-hover: #3e3e3e;
+  --Foundation-Blue-blue-6: #002365;
+}
 *,
 *:before,
 *:after {
@@ -39,7 +56,9 @@ body {
   color: black;
   scroll-behavior: smooth;
 }
-
+a {
+  text-decoration: none;
+}
 /* font */
 /* 
 url("") format("truetype"),
@@ -105,31 +124,17 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   font-weight: 200;
   font-style: normal;
 }
-:root {
-  --Trng: #fff;
-  --Linear-blue-1: linear-gradient(180deg, #004ab8 24.55%, #002262 77.84%);
-  --Linear-blue-2: linear-gradient(148deg, #004ab8 20.67%, #002262 81.2%);
-  --Linear-orange-1: linear-gradient(92deg, #e79a26 0.26%, #ffba54 100.1%);
-  --greyscaletext-0: #fff;
-  --Grey-Normal: #454545;
-  --Grey-Dark: #343434;
-  --Spacing-Spacing---none: 0rem;
-  --Spacing-Spacing---6: 1.5rem;
-  --LINE: #ffaf46;
-  --Linear-blue-1: #004ab8;
-  --Grey-Light: #ececec;
-  --Foundation-Blue-blue-2: #c2cada;
-  --grey-normal-hover: #3e3e3e;
-  --Foundation-Blue-blue-6: #002365;
-}
 /* code */
+.navmenufixed_item {
+  display: none;
+}
 .nav {
   transition: all 0.5s ease;
   height: 5.75rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 51;
 }
 .nav_imgbg {
   height: 100%;
@@ -247,6 +252,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   align-items: center;
 }
 .introduce_warper img {
+  transform: translateY(0.2rem);
   width: 8.125rem;
   height: 2.70831rem;
 }
@@ -355,6 +361,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   );
 }
 .ld_know_content {
+  margin-left: 10rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -367,7 +374,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   top: 0;
 }
 .know_content_btn {
-  margin-left: 5rem;
+  margin-left: 4rem;
   position: relative;
   margin-bottom: 2.7rem;
   border: none;
@@ -392,7 +399,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   width: 5.72175rem;
   height: 4.86619rem;
   position: absolute;
-  top: -3.86619rem;
+  top: -2.86619rem;
   left: -4.2175rem;
 }
 .know_warpper_text {
@@ -444,7 +451,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   width: 100%;
   position: relative;
   height: 56.9375rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 .artico_uses_hoatiet {
   position: absolute;
@@ -470,6 +477,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   bottom: 7.31rem;
 }
 .artico_uses_title {
+  height: max-content;
   width: 100%;
   position: relative;
   z-index: 20;
@@ -714,7 +722,8 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
-.special_mechanism_contaier_p {
+.special_mechanism_contaier p {
+  margin-top: 1rem;
   width: 44.125rem;
   color: var(--Grey-Dark, #343434);
   font-family: SVN-Gilroy;
@@ -836,6 +845,11 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   );
 }
 .collavant_content_item p {
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
   color: var(--Grey-Normal, #454545);
   font-family: SVN-Gilroy;
   font-size: 1.25rem;
@@ -882,6 +896,11 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   );
 }
 .collavant_detail_content2_bg p {
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
   width: 13.8125rem;
   color: #fff;
   text-align: center;
@@ -937,6 +956,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   z-index: 20;
 }
 .case_title h2 {
+  height: 8rem;
   width: 50.5rem;
   font-family: SVN-Gilroy;
   font-size: 3rem;
@@ -970,6 +990,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   align-items: end;
 }
 .case_list_item {
+  position: relative;
   margin-bottom: 3.12rem;
   display: flex;
   width: 22.375rem;
@@ -978,6 +999,22 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   border-radius: 12.5rem;
   border: 1.051px solid #ed8b07;
   background: #ed8b07;
+}
+.case_list_item_linesong1 {
+  opacity: 0.5;
+  position: absolute;
+  left: -0.80056rem;
+  bottom: -1.325rem;
+  width: 8.625rem;
+  height: 8.625rem;
+}
+.case_list_item_linesong2 {
+  opacity: 0.2;
+  position: absolute;
+  left: -1.60056rem;
+  bottom: -2.1rem;
+  width: 10rem;
+  height: 10rem;
 }
 .case_list_item_img {
   margin-right: 1rem;
@@ -1053,6 +1090,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   left: 0;
 }
 .reason_h2 {
+  width: 100%;
   text-align: center;
   font-family: SVN-Gilroy;
   font-size: 3rem;
@@ -1068,6 +1106,8 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   -webkit-text-fill-color: transparent;
 }
 .reason_h3 {
+  width: 100%;
+  text-align: center;
   margin-bottom: 1rem;
   margin-top: 2.62rem;
   font-family: SVN-Gilroy;
@@ -1145,6 +1185,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   height: 5.5rem;
 }
 .reason_item_title_text span {
+  padding-right: 0.5rem;
   text-align: center;
   font-family: SVN-Gilroy;
   font-size: 1.5rem;
@@ -1206,6 +1247,9 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 }
 
 /* modal */
+.mySwiperModul {
+  width: 100%;
+}
 
 .modal {
   position: fixed;
@@ -1221,7 +1265,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .modal_container {
   display: flex;
   width: 43.75rem;
-  max-height: 50rem;
+  max-height: 40rem;
   flex-direction: column;
   align-items: center;
   border-radius: 1.5rem;
@@ -1243,59 +1287,13 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
 .modal_close svg {
   cursor: pointer;
 }
-.modal_navmenu_btn {
-  margin-right: 0.5rem;
-  cursor: pointer;
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.36rem 0.52rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  background: var(--Grey-Light, #ececec);
-}
-.modal_navmenu_btn p {
-  color: var(--Foundation-Blue-blue-2, #c2cada);
-  font-family: SVN-Gilroy;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: -0.01875rem;
-  text-transform: uppercase;
-}
-.modal_navmenu_btn_active {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.45rem 0.65rem;
-  border-radius: 2.5rem;
-  border: 2px solid var(--Linear-blue-1, #004ab8);
-}
-.modal_navmenu_btn_active p {
-  font-family: SVN-Gilroy;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 120%;
-  letter-spacing: -0.0225rem;
-  text-transform: uppercase;
-  background: var(
-    --Linear-blue-1,
-    linear-gradient(180deg, #004ab8 24.55%, #002262 77.84%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .modal_content {
   display: flex;
+  width: 43.75rem;
   padding: var(--Spacing-Spacing---none, 0rem) 2.5rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex: 1 0 0;
   margin-bottom: 1rem;
 }
 .modal_content_img {
@@ -1325,6 +1323,8 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   -webkit-text-fill-color: transparent;
 }
 .modal_content_text p {
+  max-height: 15rem;
+  overflow-y: auto;
   color: var(--Grey-Normal, #454545);
   font-family: SVN-Gilroy;
   font-size: 1rem;
@@ -1333,7 +1333,49 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   line-height: 140%;
   margin-top: 0.5rem;
 }
-
+.swiper-pagination-bullet {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.36rem 0.52rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--Grey-Light, #ececec);
+  color: var(--Foundation-Blue-blue-2, #c2cada);
+  font-family: SVN-Gilroy;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.01875rem;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 2.5rem;
+  border: 2px solid var(--Linear-blue-1, #004ab8);
+  font-family: SVN-Gilroy;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -0.0225rem;
+  text-transform: uppercase;
+  background: var(
+    --Linear-blue-1,
+    linear-gradient(180deg, #004ab8 24.55%, #002262 77.84%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* form */
 .reason_form {
   position: relative;
@@ -1362,6 +1404,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   align-items: center;
 }
 .share h2 {
+  padding-right: 0.25rem;
   font-family: SVN-Gilroy;
   font-size: 3rem;
   font-style: italic;
@@ -1400,6 +1443,15 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   font-weight: 700;
   line-height: 133.3%;
   margin-right: 0.25rem;
+}
+.share_all p:nth-child(2) {
+  transform: translateY(0.15rem);
+  color: #657384;
+  font-family: SVN-Gilroy;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
 }
 .evaluate {
   display: flex;
@@ -1605,6 +1657,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   display: flex;
   align-items: flex-start;
   margin-left: 4rem;
+  margin-top: 1.5rem;
 }
 .share_comment1_box_nameqtv {
   font-family: SVN-Gilroy;
@@ -1672,6 +1725,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   width: 100%;
 }
 .artico_footer_title_warper img {
+  transform: translateY(0.1rem);
   width: 5.63256rem;
   height: 1.91213rem;
 }
@@ -1794,8 +1848,13 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   font-weight: 700;
   line-height: 150%;
 }
+/*  */
+
 /* mb */
 @media (max-width: 767px) {
+  .modal_container {
+    width: 100%;
+  }
   .nav_menu_icon {
     display: block;
   }
@@ -1965,6 +2024,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     margin-right: 2.12rem;
   }
   .ld_know_content {
+    margin-left: 0rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1989,7 +2049,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   .know_content_btn svg {
     width: 2.5315rem;
     height: 2.15294rem;
-    top: -3.19rem;
+    top: -4.19rem;
     left: -3.2175rem;
   }
   .know_textpt {
@@ -2012,7 +2072,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   }
   .know_warpper_text_p span,
   .know_warpper_text2_p span {
-    /* margin-left: 0.25rem; */
+    margin-left: 0rem;
     font-family: SVN-Gilroy;
     font-size: 0.875rem;
     font-style: normal;
@@ -2189,9 +2249,6 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     width: 11.25rem;
     height: 11.25rem;
   }
-  .special_mechanism_contaier_p {
-    width: 100%;
-  }
   .special_mechanism_contaier_span {
     font-family: SVN-Gilroy;
     font-size: 1.25rem;
@@ -2199,7 +2256,8 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     font-weight: 800;
     line-height: 133.3%;
   }
-  .special_mechanism_contaier_p {
+  .special_mechanism_contaier p {
+    width: 100%;
     color: var(--Grey-Dark, #343434);
     font-family: SVN-Gilroy;
     font-size: 1rem;
@@ -2220,7 +2278,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     left: 0;
   }
   .special_mechanism_phay {
-    margin-top: 5rem;
+    margin-top: 3.9rem;
   }
   .special_mechanism_phay svg {
     width: 2rem;
@@ -2269,8 +2327,8 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   }
   .collavant_content_item {
     width: 19.1875rem;
-    height: auto;
     padding-left: 3.19rem;
+    margin-bottom: 1.5rem;
   }
   .collavant_content_item p {
     color: var(--Grey-Normal, #454545);
@@ -2347,6 +2405,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     margin-right: 0;
   }
   .case_list_item {
+    height: 5.5rem;
     margin-bottom: 1.5rem;
     width: 100%;
   }
@@ -2548,7 +2607,7 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
   }
   .share_comment_2 {
     margin-left: 1.81rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   .share_comment1_box_name {
     color: var(--Grey-Normal, #454545);
@@ -2773,7 +2832,71 @@ url("./fonts/SVN-Gilroy\ XBold.otf") format("truetype"), */
     max-height: 16rem;
     overflow-y: auto;
   }
-}
-a {
-  text-decoration: none;
+  .case_list_item_linesong1 {
+    width: 6.375rem;
+    height: 6.375rem;
+    left: -0.50056rem;
+    bottom: -0.525rem;
+  }
+  .case_list_item_linesong2 {
+    width: 7.25rem;
+    height: 7.25rem;
+    left: -1.0056rem;
+    bottom: -0.8825rem;
+  }
+  .modal_navmenu {
+    background-color: #ececec;
+    width: max-content !important;
+    margin-right: auto;
+    padding: 0;
+    border-radius: 2rem;
+    flex: none;
+  }
+
+  /*  */
+  .modal_navmenufixed {
+    transform: translateX(100%);
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--Foundation-Blue-blue-6, #002365);
+    padding-top: 7.25rem;
+    padding-left: 1rem;
+    transition: all 0.5s ease;
+  }
+  .navmenu_modal {
+    border-bottom: 1px solid var(--Foundation-Blue-blue-5, #2e4b81);
+  }
+  .navmenufixed_item {
+    border-radius: 1.875rem 0rem 0rem 1.875rem;
+    display: flex;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    color: var(--Trng, #fff);
+    font-family: SVN-Gilroy;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.3%;
+  }
+  .active_navmenufixed_item {
+    border-radius: 1.875rem 0rem 0rem 1.875rem;
+    background: linear-gradient(90deg, #e79a26 0%, rgba(231, 154, 38, 0) 100%);
+  }
+  .navmenufixed_icon {
+    position: absolute;
+    display: flex;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  .navmenufixed_icon img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.54rem;
+  }
+  #nav_menu_icon_X {
+    display: none;
+  }
 }
