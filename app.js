@@ -115,18 +115,6 @@ function DataCmt(data) {
       i.remove(); // Remove the element
     });
   });
-  {
-    /* <img
-      class="share_comment_lineLmb pchidden"
-      src="./svg/lineLmb.svg"
-      alt=""
-    <img
-      class="share_comment_lineLpc"
-      src="./svg/lineL.svg"
-      alt=""
-    />
-    /> */
-  }
   data?.rates.forEach((item) => {
     const star = parseInt(item?.category_slug[0]);
     const itemElement = `<div class="share_comment">
