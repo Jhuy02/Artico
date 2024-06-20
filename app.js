@@ -45,3 +45,13 @@ nav_menu_icon_X.addEventListener("click", function () {
   nav_menu_icon_X.style.display = "none";
   document.querySelector("body").style.overflow = "auto";
 });
+const artico_contact_btnmuangay = document.querySelector(
+  "#artico_contact_btnmuangay"
+);
+
+artico_contact_btnmuangay.addEventListener("click", function (e) {
+  e.preventDefault();
+  const targetElement = document.getElementById("reason_form");
+  console.log(targetElement);
+  targetElement.scrollIntoView({ behavior: "smooth" });
+});
